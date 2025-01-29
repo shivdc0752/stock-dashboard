@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Layout */
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  /* Flexbox for Centering */
+  .flex {
+    display: flex;
+    justify-content: flex-start; /* Changed to left-aligned layout */
+    align-items: flex-start;    /* Align items to the top */
+    padding-left: 2rem; /* Added padding to give space on the left */
+  }
+  
+  /* Containers */
+  .bg-white {
+    background-color: white;
+  }
+  
+  .shadow-xl {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .p-6 {
+    padding: 24px;
+  }
+  
+  .rounded-lg {
+    border-radius: 12px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 16px;
+  }
+  
+  .mt-6 {
+    margin-top: 24px;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  /* Input & Button Styling */
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, transform 0.3s;
+    background-color: #f9fafb;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #4C8BF5;
+    transform: scale(1.02);
+  }
+  
+  button {
+    background-color: #4C8BF5;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    font-weight: 600;
+  }
+  
+  button:hover {
+    background-color: #3f7be2;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Typography */
+  .text-xl {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .text-3xl {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  strong {
+    font-weight: 700;
+  }
+  
+  .text-red-500 {
+    color: #e53e3e;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Plot Styling */
+  img {
+    width: 100%;     /* Make the image fill the container */
+    height: auto;    /* Ensure the image maintains its aspect ratio */
+    max-height: 400px; /* Set a max-height to control its size */
+    border-radius: 12px;
+    margin-bottom: 16px;
+    object-fit: contain; /* Ensures image scales properly within its container */
+  }
+  
+  /* Card Container */
+  .card-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex; /* Use flexbox for the card layout */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card-left {
+    flex: 1; /* This will take the remaining space on the left */
+    padding-right: 20px;
+  }
+  
+  .card-right {
+    width: 50%; /* The plot will take 50% of the container's width */
+    padding-left: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .max-w-lg {
+      max-width: 100%;
+    }
+  
+    .card-container {
+      flex-direction: column; /* Stack the content vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .card-left {
+      padding-right: 0;
+    }
+  
+    .card-right {
+      width: 100%; /* The plot takes full width on smaller screens */
+      padding-left: 0;
+    }
+  
+    img {
+      max-height: 300px; /* Reduce image size on smaller screens */
+    }
+  }
+  
